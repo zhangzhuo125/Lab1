@@ -13,6 +13,7 @@ public class Polynomial {
 
 			}
 			else
+
 			{
 				String[] newstr=s.split("\\+");
 				for(int x=0;x<newstr.length;x++)
@@ -50,7 +51,7 @@ public class Polynomial {
 			{
 			    s2=s2.replace(str1[i].split("=")[0],str1[i].split("=")[1]);
 			}
-			System.out.println(s2);
+			System.out.println(s2);//print the string
 		}
 	}
 	private static void derivative(String s,String s2)
