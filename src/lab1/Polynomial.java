@@ -3,12 +3,14 @@ import java.util.*;
 public class Polynomial {
 	private  static int expression(String s)
 	{
-		int num=0;
+		int num=0;//initialize the number
+
 		for(int i=0;i<s.length();i++)
 		{
 			if(s.charAt(i)<42 || (s.charAt(i)>43 && s.charAt(i)<48) || (s.charAt(i)>57 && s.charAt(i)<97) || s.charAt(i)>122)
 			{
 				num++;
+
 			}
 			else
 			{
@@ -22,17 +24,18 @@ public class Polynomial {
 							if(newstr[x].split("\\*")[j].charAt(0)>=97 && newstr[x].split("\\*")[j].charAt(0)<=122)
 							{
 								num++;
+
 							}
 						}
-						
+
 					}
 				}
 			}
-			
+
 		}
 		return num;
 	}
-	
+
 	private static void simplify(String s,String s1)
 	{
 		if(s1.equals("!simplify"))
@@ -88,7 +91,7 @@ public class Polynomial {
 					}
 				}
 				else
-				{		
+				{
 					str1[i]=str1[i].replaceFirst(((""+s2.charAt(4))),String.valueOf(num));
 					sb=sb+"+"+str1[i];
 				}
